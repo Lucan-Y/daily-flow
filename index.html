@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Daily Flow is a small local-first task rhythm tool for lightweight personal planning."
+    />
+    <title>Daily Flow</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <main class="app" aria-live="polite">
+      <header class="app-header">
+        <div>
+          <h1>Daily Flow</h1>
+          <p id="todayLabel"></p>
+        </div>
+        <div class="header-actions">
+          <button id="completedButton" type="button">Completed</button>
+          <button id="addButton" class="primary" type="button">Add</button>
+        </div>
+      </header>
+
+      <section id="board" class="board" aria-label="Task time windows"></section>
+    </main>
+
+    <dialog id="taskDialog" class="dialog">
+      <form id="taskForm" method="dialog" class="dialog-panel">
+        <div class="dialog-title-row">
+          <h2>New Task</h2>
+          <button class="icon-button" type="button" data-close-dialog aria-label="Close">×</button>
+        </div>
+
+        <label>
+          Task
+          <input id="taskTitle" name="title" autocomplete="off" required />
+        </label>
+
+        <label>
+          Due date
+          <input id="taskDueDate" name="dueDate" type="date" required />
+        </label>
+
+        <button id="noteToggle" class="text-button" type="button">Add a note</button>
+
+        <label id="noteField" class="hidden">
+          Note
+          <textarea id="taskNotes" name="notes" rows="4"></textarea>
+        </label>
+
+        <div class="dialog-actions">
+          <button class="primary" type="submit">Save</button>
+        </div>
+      </form>
+    </dialog>
+
+    <dialog id="completedDialog" class="dialog">
+      <section class="dialog-panel">
+        <div class="dialog-title-row">
+          <h2>Last 15 Days</h2>
+          <button class="icon-button" type="button" data-close-dialog aria-label="Close">×</button>
+        </div>
+        <div id="completedList" class="completed-list"></div>
+      </section>
+    </dialog>
+
+    <dialog id="noteDialog" class="dialog">
+      <section class="dialog-panel note-dialog">
+        <div class="dialog-title-row">
+          <h2 id="noteTitle"></h2>
+          <button class="icon-button" type="button" data-close-dialog aria-label="Close">×</button>
+        </div>
+        <p id="noteText"></p>
+      </section>
+    </dialog>
+
+    <script src="./script.js" defer></script>
+  </body>
+</html>
