@@ -115,7 +115,7 @@ https://<your-github-username>.github.io/daily-flow/
 部署后，在线演示地址通常类似：
 
 ```text
-https://<你的 GitHub 用户名>.github.io/daily-flow/
+https://lucan-y.github.io/daily-flow/
 ```
 
 ## Tech Stack / 技术栈
