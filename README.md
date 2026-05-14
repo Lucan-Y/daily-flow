@@ -36,6 +36,10 @@ Daily Flow 是一个轻量的个人任务节奏管理网页工具。它不是复
 
 每个任务只会出现在最临近的一个时间窗口中。逾期任务会留在 `7D` 中，并显示一个红色提示点。
 
+## Screenshot / 项目截图
+
+![Daily Flow Screenshot](screenshots/daily-flow-demo.png)
+
 ## Why I Built It / 为什么做这个项目
 
 This project started from a real need: I wanted a simple tool that helped me keep track of tasks without becoming another system to maintain.
